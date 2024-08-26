@@ -13,4 +13,13 @@
 
 carsSellingPrice = int(input("Enter the car's selling price: "))
 
-if carsSellingPrice > 50000: 
+if carsSellingPrice >= 50000: 
+    bonus = 0.015 * carsSellingPrice
+
+elif carsSellingPrice < 20000:
+    bonus = 200 
+
+else:
+    bonus = 0.01 * carsSellingPrice
+
+print(f"The bonus is {bonus:.2f} euros.")
